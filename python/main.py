@@ -1,5 +1,9 @@
-import os
-import taxi
+import taxiOut
+import enroute
+import json
+
+with open("settings.json", "w") as setFile:
+    setFile.write('{\n "settings": [\n')
 
 print("Flight Sim Calculator v 0.0.1")
 
@@ -10,14 +14,17 @@ print("3. Other")
 sel = int(input("Make your choice: "))
 
 if sel == 1:
-    acSel = "A20N"
-elif sel == 2: 
-    acSel = "CRJ7"
-else: 
-    acSel = "Other"
+    sel == "A20N"
+elif sel == 2:
+    sel == "CRJ7"
+else:
+    sel == "Other"
 
-with open('settings.txt', 'w') as setFile:
-    setFile.writelines('Aircraft Choice: %s, \n' % acSel)
-setFile.close()
+data = {"aircraft": sel}
+jsonObj = json.dumps(data, indent = 4)
+with open("settings.json", "a") as setFile:
+    setFile.write(jsonObj)
+    setFile.write(", \n")
 
-taxi.fuel(acSel)
+taxiOut.fuel(sel)
+enroute.fuel(sel)
