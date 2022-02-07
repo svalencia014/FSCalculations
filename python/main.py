@@ -1,30 +1,44 @@
-import taxiOut
-import enroute
+#Import packages
 import json
 
-with open("settings.json", "w") as setFile:
-    setFile.write('{\n "settings": [\n')
+#Define Fuel Burn Vars
+a20n = 4850
+crj7 = 3000
+fb = 0
 
-print("Flight Sim Calculator v 0.0.1")
-
-print("What aircraft would you like to use?")
+print("Flight simulator fuel calculator v 0.1")
 print("1. A20N")
 print("2. CRJ7")
 print("3. Other")
-sel = int(input("Make your choice: "))
+print("What plane are you using?")
 
-if sel == 1:
-    sel == "A20N"
-elif sel == 2:
-    sel == "CRJ7"
+acSel = int(input("Choose one: "))
+
+if acSel == 1:
+    fb = a20n
+elif acSel ==2:
+    fb = crj7
+elif acSel == 3:
+    fb = int(input("What is the fuel burn of your Aircraft? "))
+
+#----------Taxi Out Fuel--------------
+dist = int(input("What is the distance to taxi to the runway? "))
+gs = 20
+
+ete = (dist/gs)
+fuel = round(ete * fb, 2)
+
+if ete < 1:
+    ete = (ete * 60)
+    unit = "minutes"
 else:
-    sel == "Other"
+    unit = "hours"
 
-data = {"aircraft": sel}
-jsonObj = json.dumps(data, indent = 4)
-with open("settings.json", "a") as setFile:
-    setFile.write(jsonObj)
-    setFile.write(", \n")
+ete = str(ete)
+fuel = str(fuel)
 
-taxiOut.fuel(sel)
-enroute.fuel(sel)
+print(f'It will take {ete} {unit} to taxi to the runway.')
+print(f'It will take {fuel} pounds of fuel to taxi to the runway')
+#-------------------------------------
+#------------Enroute------------------
+
