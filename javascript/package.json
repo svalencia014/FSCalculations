@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "javascript",
+  "description": "For running with node.js",
+  "version": "0.1.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC"
+}
