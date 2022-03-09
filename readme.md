@@ -11,3 +11,11 @@ or <br>
 
 3. Run with python <br>
 `python3 main.py` (Could be different depending on your install)
+
+### Other Info
+
+#### Features/Bugs
+Put them in the Issues Tab with the appropriate labels <br>
+* Bugs - `bug` <br>
+* Features - `enhancement` <br>
+* Documentation suggestions - `documentation` <br>
