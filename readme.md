@@ -20,6 +20,6 @@ Put them in the Issues Tab with the appropriate labels <br>
 * Features - `enhancement` <br>
 * Documentation suggestions - `documentation` <br>
 
-#### Support
+#### Support me
 * Checkout my the stuff on my [website](http://svalencia014.cf/) under the `MY PROJECTS`, `MY SITES`, or `MY SOCIALS` tabs.
 * Use the [kofi](https://ko-fi.com/bifocalcanvas77) link on the side to donate
