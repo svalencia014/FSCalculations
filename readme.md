@@ -19,3 +19,6 @@ Put them in the Issues Tab with the appropriate labels <br>
 * Bugs - `bug` <br>
 * Features - `enhancement` <br>
 * Documentation suggestions - `documentation` <br>
+
+#### Support
+* Checkout my other projects at my [website](http://svalencia014.cf)
